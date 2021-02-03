@@ -3,13 +3,10 @@ pragma solidity ^0.7.4;
 contract My721token{
     string public name;
     string public symbol;
-    uint public total;
 
-    constructor(string memory _name, string memory _symbol, uint _total){
+    constructor(string memory _name, string memory _symbol){
         name=_name;
         symbol=_symbol;
-        total=_total;
-        tokens[msg.sender]=total;
     }
 
     mapping(address=>uint) tokens;
